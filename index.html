@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ANNA — Issue 13 — Birthday Edition</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Canvas-Confetti via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
@@ -28,12 +26,12 @@
   <svg id="pause-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none">
     <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
   </svg>
-  <!-- VERVANG ▸ het src-pad naar jouw mp3 in de /audio map -->
   <audio id="bg-music" loop>
     <source src="audio/jouw-nummer.mp3" type="audio/mpeg" />
   </audio>
   <span id="music-label">♪ Speel muziek</span>
 </div>
+
 
 <!-- ════════════════════════════════════════════════════════
      SECTIE 1 — HERO / MAGAZINE COVER
@@ -41,7 +39,6 @@
 <section id="hero">
   <div class="inner">
 
-    <!-- Bovenste meta-rij (zoals een tijdschrift-koptekst) -->
     <div class="hero-meta">
       <div class="hero-meta-left">
         Birthday Edition<br />
@@ -53,22 +50,15 @@
       </div>
     </div>
 
-    <!-- Issue-label -->
     <div class="hero-issue">Issue 13 — Birthday Edition</div>
-
-    <!-- Grote naam -->
     <h1 class="hero-name">ANNA</h1>
 
-    <!-- Typewriter-tagline -->
-    <!-- VERVANG ▸ de zinnen in script.js (typewriterLines) -->
     <p class="hero-subtitle"><span id="typewriter"></span></p>
 
-    <!-- Datum -->
     <p class="hero-date">
       <span>1 mei 2026</span> &nbsp;·&nbsp; Jij wordt 13
     </p>
 
-    <!-- CTA knop → triggert confetti + muziek -->
     <button class="btn-cadeau" id="btn-cadeau" aria-label="Open je cadeau">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 12v10H4V12M22 7H2v5h20V7zM12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
@@ -77,17 +67,14 @@
     </button>
 
   </div>
-
-  <!-- Decoratief verticaal streepje (desktop) -->
   <div class="hero-accent-line" aria-hidden="true"></div>
-
-  <!-- Groot achtergrond-getal -->
   <div class="hero-vol" aria-hidden="true">13</div>
 </section>
 
 
 <!-- ════════════════════════════════════════════════════════
-     SECTIE 2 — 13 REDENEN WAAROM WE VAN JE HOUDEN
+     SECTIE 2 — 13 REDENEN
+     data-ek="reden-0" t/m "reden-12"
      ════════════════════════════════════════════════════════ -->
 <section id="redenen">
   <div class="inner">
@@ -97,71 +84,57 @@
 
     <ol class="redenen-grid" role="list">
 
-      <!-- VERVANG ▸ Vervang elke placeholder-tekst door een echte reden -->
-
       <li class="reden-item fade-up d1">
         <span class="reden-num" aria-hidden="true">1</span>
-        <span class="reden-text"><!-- VERVANG → reden 1 -->Jouw lach die de hele kamer oplichter.</span>
+        <span class="reden-text" data-ek="reden-0">Jouw lach die de hele kamer oplichter.</span>
       </li>
-
       <li class="reden-item fade-up d2">
         <span class="reden-num" aria-hidden="true">2</span>
-        <span class="reden-text"><!-- VERVANG → reden 2 -->Je hebt altijd een mening — en die telt.</span>
+        <span class="reden-text" data-ek="reden-1">Je hebt altijd een mening — en die telt.</span>
       </li>
-
       <li class="reden-item fade-up d3">
         <span class="reden-num" aria-hidden="true">3</span>
-        <span class="reden-text"><!-- VERVANG → reden 3 -->Je outfits zijn altijd on point, altijd.</span>
+        <span class="reden-text" data-ek="reden-2">Je outfits zijn altijd on point, altijd.</span>
       </li>
-
       <li class="reden-item fade-up d1">
         <span class="reden-num" aria-hidden="true">4</span>
-        <span class="reden-text"><!-- VERVANG → reden 4 -->Je droomt groots en gelooft er ook in.</span>
+        <span class="reden-text" data-ek="reden-3">Je droomt groots en gelooft er ook in.</span>
       </li>
-
       <li class="reden-item fade-up d2">
         <span class="reden-num" aria-hidden="true">5</span>
-        <span class="reden-text"><!-- VERVANG → reden 5 -->Je bent de beste zus die je kunt wensen.</span>
+        <span class="reden-text" data-ek="reden-4">Je bent de beste zus die je kunt wensen.</span>
       </li>
-
       <li class="reden-item fade-up d3">
         <span class="reden-num" aria-hidden="true">6</span>
-        <span class="reden-text"><!-- VERVANG → reden 6 -->Je tekeningen zijn al beter dan de meeste designers.</span>
+        <span class="reden-text" data-ek="reden-5">Je tekeningen zijn al beter dan de meeste designers.</span>
       </li>
-
       <li class="reden-item fade-up d1">
         <span class="reden-num" aria-hidden="true">7</span>
-        <span class="reden-text"><!-- VERVANG → reden 7 -->Je weet altijd wat stijl is.</span>
+        <span class="reden-text" data-ek="reden-6">Je weet altijd wat stijl is.</span>
       </li>
-
       <li class="reden-item fade-up d2">
         <span class="reden-num" aria-hidden="true">8</span>
-        <span class="reden-text"><!-- VERVANG → reden 8 -->Je zet altijd door, zelfs als het moeilijk is.</span>
+        <span class="reden-text" data-ek="reden-7">Je zet altijd door, zelfs als het moeilijk is.</span>
       </li>
-
       <li class="reden-item fade-up d3">
         <span class="reden-num" aria-hidden="true">9</span>
-        <span class="reden-text"><!-- VERVANG → reden 9 -->Je humor maakt elke dag beter.</span>
+        <span class="reden-text" data-ek="reden-8">Je humor maakt elke dag beter.</span>
       </li>
-
       <li class="reden-item fade-up d1">
         <span class="reden-num" aria-hidden="true">10</span>
-        <span class="reden-text"><!-- VERVANG → reden 10 -->Je bent eerlijk — altijd, ook als het niet makkelijk is.</span>
+        <span class="reden-text" data-ek="reden-9">Je bent eerlijk — altijd, ook als het niet makkelijk is.</span>
       </li>
-
       <li class="reden-item fade-up d2">
         <span class="reden-num" aria-hidden="true">11</span>
-        <span class="reden-text"><!-- VERVANG → reden 11 -->Je hebt een hart zo groot als Parijs.</span>
+        <span class="reden-text" data-ek="reden-10">Je hebt een hart zo groot als Parijs.</span>
       </li>
-
       <li class="reden-item fade-up d3">
         <span class="reden-num" aria-hidden="true">12</span>
-        <span class="reden-text"><!-- VERVANG → reden 12 -->Je maakt iedereen om je heen vrolijker.</span>
+        <span class="reden-text" data-ek="reden-11">Je maakt iedereen om je heen vrolijker.</span>
       </li>
-
       <li class="reden-item fade-up d1">
         <span class="reden-num" aria-hidden="true">13</span>
-        <span class="reden-text"><!-- VERVANG → reden 13 -->Omdat jij gewoon Anna bent — en dat is meer dan genoeg.</span>
+        <span class="reden-text" data-ek="reden-12">Omdat jij gewoon Anna bent — en dat is meer dan genoeg.</span>
       </li>
 
     </ol>
@@ -171,6 +144,7 @@
 
 <!-- ════════════════════════════════════════════════════════
      SECTIE 3 — FAMILIE-BERICHTEN
+     data-ek="kaart-N-naam/rol/bericht/emoji"  (N = 0..5)
      ════════════════════════════════════════════════════════ -->
 <section id="familie">
   <div class="inner">
@@ -180,78 +154,52 @@
 
     <div class="kaarten-grid">
 
-      <!-- VERVANG ▸ Vul elk .kaart-bericht in met het echte bericht -->
-
-      <!-- Kaart: Tijn -->
+      <!-- Kaart 0: Tijn -->
       <div class="kaart fade-up d1">
-        <div class="kaart-naam">Tijn</div>
-        <div class="kaart-rol">Grote broer</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht van Tijn -->
-          Lieve Anna, ik ben zo trots op wie je aan het worden bent.
-          Jij gaat die modewereld écht veroveren — ik weet het zeker.
-          Gelukkige verjaardag zus! 🎂
-        </p>
-        <div class="kaart-emoji">✉️</div>
+        <div class="kaart-naam" data-ek="kaart-0-naam">Tijn</div>
+        <div class="kaart-rol" data-ek="kaart-0-rol">Grote broer</div>
+        <p class="kaart-bericht" data-ek="kaart-0-bericht">Lieve Anna, ik ben zo trots op wie je aan het worden bent. Jij gaat die modewereld écht veroveren — ik weet het zeker. Gelukkige verjaardag zus! 🎂</p>
+        <div class="kaart-emoji" data-ek="kaart-0-emoji">✉️</div>
       </div>
 
-      <!-- Kaart: Bart (papa) -->
+      <!-- Kaart 1: Bart (papa) -->
       <div class="kaart fade-up d2">
-        <div class="kaart-naam">Bart</div>
-        <div class="kaart-rol">Papa</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht van papa Bart -->
-          Lieve Anna, 13 jaar geleden veranderde alles voor het beste.
-          Jouw passie voor mode maakt ons zo trots. Parijs wacht op jou!
-          Veel liefs, Papa.
-        </p>
-        <div class="kaart-emoji">💛</div>
+        <div class="kaart-naam" data-ek="kaart-1-naam">Bart</div>
+        <div class="kaart-rol" data-ek="kaart-1-rol">Papa</div>
+        <p class="kaart-bericht" data-ek="kaart-1-bericht">Lieve Anna, 13 jaar geleden veranderde alles voor het beste. Jouw passie voor mode maakt ons zo trots. Parijs wacht op jou! Veel liefs, Papa.</p>
+        <div class="kaart-emoji" data-ek="kaart-1-emoji">💛</div>
       </div>
 
-      <!-- Kaart: Moniek (mama) -->
+      <!-- Kaart 2: Moniek (mama) -->
       <div class="kaart fade-up d3">
-        <div class="kaart-naam">Moniek</div>
-        <div class="kaart-rol">Mama</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht van mama Moniek -->
-          Mijn lieve Anna, je bent elke dag een beetje meer jezelf.
-          En dat jezelf is al zo mooi. Ik hou oneindig veel van jou.
-          Gelukkige verjaardag, schatje! 💕
-        </p>
-        <div class="kaart-emoji">🌹</div>
+        <div class="kaart-naam" data-ek="kaart-2-naam">Moniek</div>
+        <div class="kaart-rol" data-ek="kaart-2-rol">Mama</div>
+        <p class="kaart-bericht" data-ek="kaart-2-bericht">Mijn lieve Anna, je bent elke dag een beetje meer jezelf. En dat jezelf is al zo mooi. Ik hou oneindig veel van jou. Gelukkige verjaardag, schatje! 💕</p>
+        <div class="kaart-emoji" data-ek="kaart-2-emoji">🌹</div>
       </div>
 
-      <!-- Kaart: extra familielid 1 — VERVANG naam en rol -->
+      <!-- Kaart 3: extra familielid -->
       <div class="kaart fade-up d1">
-        <div class="kaart-naam"><!-- VERVANG → naam -->[Naam]</div>
-        <div class="kaart-rol"><!-- VERVANG → rol -->[Broer / Zus / Opa / Oma]</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht -->
-          Schrijf hier jouw bericht voor Anna...
-        </p>
-        <div class="kaart-emoji">🎀</div>
+        <div class="kaart-naam" data-ek="kaart-3-naam">[Naam]</div>
+        <div class="kaart-rol" data-ek="kaart-3-rol">[Broer / Zus / Opa / Oma]</div>
+        <p class="kaart-bericht" data-ek="kaart-3-bericht">Schrijf hier jouw bericht voor Anna...</p>
+        <div class="kaart-emoji" data-ek="kaart-3-emoji">🎀</div>
       </div>
 
-      <!-- Kaart: extra familielid 2 — VERVANG naam en rol -->
+      <!-- Kaart 4: extra familielid -->
       <div class="kaart fade-up d2">
-        <div class="kaart-naam"><!-- VERVANG → naam -->[Naam]</div>
-        <div class="kaart-rol"><!-- VERVANG → rol -->[Broer / Zus / Opa / Oma]</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht -->
-          Schrijf hier jouw bericht voor Anna...
-        </p>
-        <div class="kaart-emoji">🎈</div>
+        <div class="kaart-naam" data-ek="kaart-4-naam">[Naam]</div>
+        <div class="kaart-rol" data-ek="kaart-4-rol">[Broer / Zus / Opa / Oma]</div>
+        <p class="kaart-bericht" data-ek="kaart-4-bericht">Schrijf hier jouw bericht voor Anna...</p>
+        <div class="kaart-emoji" data-ek="kaart-4-emoji">🎈</div>
       </div>
 
-      <!-- Kaart: extra familielid 3 — VERVANG naam en rol -->
+      <!-- Kaart 5: extra familielid -->
       <div class="kaart fade-up d3">
-        <div class="kaart-naam"><!-- VERVANG → naam -->[Naam]</div>
-        <div class="kaart-rol"><!-- VERVANG → rol -->[Broer / Zus / Opa / Oma]</div>
-        <p class="kaart-bericht">
-          <!-- VERVANG → bericht -->
-          Schrijf hier jouw bericht voor Anna...
-        </p>
-        <div class="kaart-emoji">💫</div>
+        <div class="kaart-naam" data-ek="kaart-5-naam">[Naam]</div>
+        <div class="kaart-rol" data-ek="kaart-5-rol">[Broer / Zus / Opa / Oma]</div>
+        <p class="kaart-bericht" data-ek="kaart-5-bericht">Schrijf hier jouw bericht voor Anna...</p>
+        <div class="kaart-emoji" data-ek="kaart-5-emoji">💫</div>
       </div>
 
     </div>
@@ -261,9 +209,8 @@
 
 <!-- ════════════════════════════════════════════════════════
      SECTIE 4 — FOTO-GALERIJ
-     ════════════════════════════════════════════════════════
-     Drop je foto's in de /images map en vervang het src-pad.
-     Houd bestandsnamen zonder spaties: anna-01.jpg, anna-02.jpg …
+     data-pk="gallerij-0" t/m "gallerij-5"
+     data-ek="gallerij-0-caption" t/m "gallerij-5-caption"
      ════════════════════════════════════════════════════════ -->
 <section id="gallerij">
   <div class="inner">
@@ -273,67 +220,53 @@
 
     <div class="foto-grid">
 
-      <!-- Foto 1 — groot (spans 2 kolommen op desktop) -->
-      <div class="foto-item fade-up">
-        <!-- VERVANG ▸ src="images/anna-01.jpg" en het alt-tekst -->
+      <div class="foto-item fade-up" data-pk="gallerij-0">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 1<br/>images/anna-01.jpg</span>
+          <span>Foto 1</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 1 --></div>
+        <div class="foto-caption" data-ek="gallerij-0-caption"></div>
       </div>
 
-      <!-- Foto 2 -->
-      <div class="foto-item fade-up d1">
-        <!-- VERVANG ▸ src="images/anna-02.jpg" -->
+      <div class="foto-item fade-up d1" data-pk="gallerij-1">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 2<br/>images/anna-02.jpg</span>
+          <span>Foto 2</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 2 --></div>
+        <div class="foto-caption" data-ek="gallerij-1-caption"></div>
       </div>
 
-      <!-- Foto 3 -->
-      <div class="foto-item fade-up d2">
-        <!-- VERVANG ▸ src="images/anna-03.jpg" -->
+      <div class="foto-item fade-up d2" data-pk="gallerij-2">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 3<br/>images/anna-03.jpg</span>
+          <span>Foto 3</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 3 --></div>
+        <div class="foto-caption" data-ek="gallerij-2-caption"></div>
       </div>
 
-      <!-- Foto 4 -->
-      <div class="foto-item fade-up d1">
-        <!-- VERVANG ▸ src="images/anna-04.jpg" -->
+      <div class="foto-item fade-up d1" data-pk="gallerij-3">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 4<br/>images/anna-04.jpg</span>
+          <span>Foto 4</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 4 --></div>
+        <div class="foto-caption" data-ek="gallerij-3-caption"></div>
       </div>
 
-      <!-- Foto 5 -->
-      <div class="foto-item fade-up d2">
-        <!-- VERVANG ▸ src="images/anna-05.jpg" -->
+      <div class="foto-item fade-up d2" data-pk="gallerij-4">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 5<br/>images/anna-05.jpg</span>
+          <span>Foto 5</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 5 --></div>
+        <div class="foto-caption" data-ek="gallerij-4-caption"></div>
       </div>
 
-      <!-- Foto 6 -->
-      <div class="foto-item fade-up d3">
-        <!-- VERVANG ▸ src="images/anna-06.jpg" -->
+      <div class="foto-item fade-up d3" data-pk="gallerij-5">
         <div class="foto-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          <span>Foto 6<br/>images/anna-06.jpg</span>
+          <span>Foto 6</span>
         </div>
-        <div class="foto-caption"><!-- VERVANG → bijschrift foto 6 --></div>
+        <div class="foto-caption" data-ek="gallerij-5-caption"></div>
       </div>
-
-      <!-- OPTIONEEL: voeg foto-items toe als je meer dan 6 foto's hebt -->
 
     </div>
   </div>
@@ -342,11 +275,12 @@
 
 <!-- ════════════════════════════════════════════════════════
      SECTIE 5 — HOI AN: ANNA'S EERSTE COLLECTIE
+     data-pk="hoian-0/1/2"
+     data-ek="hoian-tagline" / "hoian-body"
      ════════════════════════════════════════════════════════ -->
 <section id="hoian">
   <div class="inner">
 
-    <!-- LIVE-badge -->
     <div class="hoian-live-badge" aria-label="Live, dit gebeurt nu">
       <span class="hoian-live-dot" aria-hidden="true"></span>
       Now
@@ -356,11 +290,11 @@
     <h2 class="fade-up">Anna's eerste<br/><em>collectie</em></h2>
     <div class="section-rule"></div>
 
-    <p class="hoian-tagline fade-up">
+    <p class="hoian-tagline fade-up" data-ek="hoian-tagline">
       Niet meer een droom — dit gebeurt <strong>nu</strong>.
     </p>
 
-    <p class="hoian-body fade-up">
+    <p class="hoian-body fade-up" data-ek="hoian-body">
       In Hoi An — de stad van de kleermakers — heeft Anna haar
       <strong>eerste eigen kledingstukken ontworpen en gemaakt</strong>.
       En alsof dat niet genoeg was: een lokale tailor bracht haar
@@ -376,47 +310,30 @@
       Week 4 van 7 · Hoi An, Vietnam
     </div>
 
-    <!-- Drie foto-slots van de collectie
-         ══════════════════════════════════════════════════════
-         FOTO 1 → images/hoian-01.jpg
-                  Anna in haar eerste zelfgemaakte stuk
-
-         FOTO 2 → images/hoian-02.jpg
-                  De jurk gemaakt door de lokale tailor
-
-         FOTO 3 → images/hoian-03.jpg
-                  Making-of: bij de tailor / met stof / schets
-         ══════════════════════════════════════════════════════ -->
     <div class="hoian-designs fade-up">
 
-      <div class="design-slot">
-        <!-- VERVANG ▸ verwijder de tekst hieronder en uncomment de img-tag -->
-        <!-- <img src="images/hoian-01.jpg" alt="Anna in haar eerste zelfgemaakte stuk" /> -->
+      <div class="design-slot" data-pk="hoian-0">
         <div class="design-slot-label">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity=".4"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
           Anna in haar<br/>eerste stuk
         </div>
-        <div class="design-slot-caption">images/hoian-01.jpg</div>
+        <div class="design-slot-caption">hoian-0</div>
       </div>
 
-      <div class="design-slot">
-        <!-- VERVANG ▸ verwijder de tekst hieronder en uncomment de img-tag -->
-        <!-- <img src="images/hoian-02.jpg" alt="De jurk gemaakt door de tailor" /> -->
+      <div class="design-slot" data-pk="hoian-1">
         <div class="design-slot-label">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity=".4"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
           De jurk door<br/>de tailor
         </div>
-        <div class="design-slot-caption">images/hoian-02.jpg</div>
+        <div class="design-slot-caption">hoian-1</div>
       </div>
 
-      <div class="design-slot">
-        <!-- VERVANG ▸ verwijder de tekst hieronder en uncomment de img-tag -->
-        <!-- <img src="images/hoian-03.jpg" alt="Making-of bij de tailor" /> -->
+      <div class="design-slot" data-pk="hoian-2">
         <div class="design-slot-label">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity=".4"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-12.5-5.5 2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
           Making-of:<br/>bij de tailor
         </div>
-        <div class="design-slot-caption">images/hoian-03.jpg</div>
+        <div class="design-slot-caption">hoian-2</div>
       </div>
 
     </div>
@@ -425,7 +342,9 @@
 
 
 <!-- ════════════════════════════════════════════════════════
-     SECTIE 6 — FUTURE AT IFM PARIS
+     SECTIE 6 — IFM PARIS
+     data-ek="ifm-quote"
+     data-pk="mood-0" t/m "mood-5"
      ════════════════════════════════════════════════════════ -->
 <section id="ifm">
   <div class="inner">
@@ -433,41 +352,18 @@
     <h2 class="fade-up">IFM Paris<br/><em>Institut Français<br/>de la Mode</em></h2>
     <div class="section-rule" style="background:var(--gold); margin:1rem auto 3rem;"></div>
 
-    <blockquote class="ifm-quote fade-up">
-      <!-- VERVANG ▸ voeg hier Anna's eigen quote in, of een inspirerende quote over mode -->
+    <blockquote class="ifm-quote fade-up" data-ek="ifm-quote">
       "Mode is niet wat je draagt — het is wie je bent
       voordat je ook maar iets zegt."
     </blockquote>
 
-    <!-- Moodboard: 6 vakjes voor inspiratie-beelden -->
-    <!-- VERVANG ▸ vervang elke .mood-item door een <img> of houd als placeholder -->
     <div class="moodboard fade-up">
-
-      <div class="mood-item">
-        <!-- <img src="images/mood-01.jpg" alt="Moodboard 1" /> -->
-        Mood 1
-      </div>
-      <div class="mood-item">
-        <!-- <img src="images/mood-02.jpg" alt="Moodboard 2" /> -->
-        Mood 2
-      </div>
-      <div class="mood-item">
-        <!-- <img src="images/mood-03.jpg" alt="Moodboard 3" /> -->
-        Mood 3
-      </div>
-      <div class="mood-item">
-        <!-- <img src="images/mood-04.jpg" alt="Moodboard 4" /> -->
-        Mood 4
-      </div>
-      <div class="mood-item">
-        <!-- <img src="images/mood-05.jpg" alt="Moodboard 5" /> -->
-        Mood 5
-      </div>
-      <div class="mood-item">
-        <!-- <img src="images/mood-06.jpg" alt="Moodboard 6" /> -->
-        Mood 6
-      </div>
-
+      <div class="mood-item" data-pk="mood-0">Mood 1</div>
+      <div class="mood-item" data-pk="mood-1">Mood 2</div>
+      <div class="mood-item" data-pk="mood-2">Mood 3</div>
+      <div class="mood-item" data-pk="mood-3">Mood 4</div>
+      <div class="mood-item" data-pk="mood-4">Mood 5</div>
+      <div class="mood-item" data-pk="mood-5">Mood 6</div>
     </div>
 
     <p class="ifm-cta fade-up" style="margin-top:3rem;">
@@ -492,6 +388,36 @@
     <span class="footer-name">Tijn</span>
   </p>
 </footer>
+
+
+<!-- ════════════════════════════════════════════════════════
+     EDIT MODE UI
+     Pencil-knop rechtsonder — alleen zichtbaar als edit
+     is toegestaan (desktop of URL ?edit=true)
+     ════════════════════════════════════════════════════════ -->
+
+<!-- Balk bovenaan — verschijnt alleen in edit mode -->
+<div id="edit-bar" hidden aria-live="polite">
+  <span class="edit-bar-status">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+    Edit mode actief — wijzigingen worden automatisch opgeslagen
+  </span>
+  <div class="edit-bar-actions">
+    <button id="btn-copy-json" class="edit-btn">Kopieer JSON</button>
+    <button id="btn-download-html" class="edit-btn">Download HTML</button>
+    <button id="btn-reset-content" class="edit-btn edit-btn--danger">↺ Reset alles</button>
+  </div>
+</div>
+
+<!-- Pencil toggle rechtsonder -->
+<button id="edit-toggle" aria-label="Edit mode aan/uit" aria-pressed="false" title="Edit mode">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+  </svg>
+</button>
+
+<!-- Hidden file input voor foto-uploads -->
+<input type="file" id="photo-input" accept="image/*" style="display:none" />
 
 
 <script src="script.js"></script>

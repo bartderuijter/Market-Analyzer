@@ -80,7 +80,59 @@ Open `index.html` in een teksteditor. Zoek op `<!-- VERVANG` (Ctrl+F / Cmd+F) �
 
 ---
 
-## 4. Deployen op GitHub Pages
+## 4. Edit mode — direct in de browser bewerken
+
+### Edit mode openen
+
+| Situatie | Hoe |
+|---|---|
+| Op desktop | Kleine potlood-knop rechtsonder (subtiel grijs) |
+| Op iPhone / tablet | Open de URL met `?edit=true` aan het einde: `https://…/index.html?edit=true` |
+
+Klik op het potlood → **edit mode actief** (gele balk bovenaan, gestippelde kaders rond bewerkbare zones).  
+Klik nogmaals → edit mode uit, alles weer schoon.
+
+### Tekst aanpassen in edit mode
+
+- Klik direct op **naam, rol, bericht, emoji** in de familiekaarten → typ
+- Klik op een **reden** in de lijst → typ
+- Klik op de **Hoi An tekst** of de **IFM-quote** → typ
+- Wijzigingen worden **automatisch opgeslagen** in de browser (localStorage)
+
+### Foto's toevoegen in edit mode
+
+1. Zorg dat edit mode aan staat
+2. Zweef over een foto-slot → je ziet een `＋ foto` hint
+3. **Klik** op het slot → bestandskiezer opent
+4. **Of sleep** een foto direct op het slot
+5. Foto wordt automatisch verkleind naar max 1200 px en opgeslagen in de browser
+6. Hover over een ingevuld slot → verschijnt een **×** knop om de foto te verwijderen
+
+> Moodboard-foto's (IFM sectie) worden verkleind naar max 600 px zodat er meer in de opslag passen.
+
+### Exporteren / publiceren
+
+In edit mode (gele balk) verschijnen drie knoppen:
+
+| Knop | Wat het doet |
+|---|---|
+| **Kopieer JSON** | Kopieert alle tekst + foto's (base64) als JSON naar je klembord. Bewaar dit als backup of om later te importeren via `localStorage.setItem('anna13-content', <json>)` in de browser console. |
+| **Download HTML** | Genereert een `anna-birthday-published.html` met alles hard-coded. Dit bestand kun je committen naar GitHub Pages voor een permanente versie zonder localStorage. |
+| **↺ Reset alles** | Verwijdert alle lokale bewerkingen. De standaard placeholder-teksten komen terug. ⚠ Niet ongedaan te maken. |
+
+### localStorage resetten
+
+Open de browser-console op de pagina (F12 → Console) en voer in:
+
+```js
+localStorage.removeItem('anna13-content')
+```
+
+Dan de pagina herladen (`F5`). Alles staat weer op de standaard placeholders.
+
+---
+
+## 5. Deployen op GitHub Pages
 
 ### Stap 1 — Maak een repository aan
 
