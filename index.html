@@ -16,24 +16,6 @@
 <body>
 
 <!-- ════════════════════════════════════════════════════════
-     MUZIEKSPELER (fixed, linksonder)
-     ▸ Vervang "audio/jouw-nummer.mp3" door je eigen bestand
-     ════════════════════════════════════════════════════════ -->
-<div id="music-player" role="button" aria-label="Muziek afspelen / pauzeren" tabindex="0">
-  <svg id="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-  <svg id="pause-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-  </svg>
-  <audio id="bg-music" loop>
-    <source src="audio/jouw-nummer.mp3" type="audio/mpeg" />
-  </audio>
-  <span id="music-label">♪ Speel muziek</span>
-</div>
-
-
-<!-- ════════════════════════════════════════════════════════
      SECTIE 1 — HERO / MAGAZINE COVER
      ════════════════════════════════════════════════════════ -->
 <section id="hero">
@@ -70,6 +52,29 @@
   <div class="hero-accent-line" aria-hidden="true"></div>
   <div class="hero-vol" aria-hidden="true">13</div>
 </section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     SPOTIFY
+     ════════════════════════════════════════════════════════ -->
+<div id="spotify-wrap">
+  <div class="spotify-inner">
+    <p class="spotify-label">♪ Anna's verjaardags-soundtrack</p>
+    <div class="spotify-frame-wrap">
+      <iframe
+        data-testid="embed-iframe"
+        src="https://open.spotify.com/embed/track/6kPJZM97LwdG9QIsT7khp6?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Anna's verjaardags-soundtrack op Spotify"
+      ></iframe>
+    </div>
+  </div>
+</div>
 
 
 <!-- ════════════════════════════════════════════════════════

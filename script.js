@@ -38,52 +38,12 @@ function launchConfetti() {
   }, 400);
 }
 
-/* ── 3. MUZIEKSPELER ──────────────────────────────────────*/
-function initMusicPlayer() {
-  const player    = document.getElementById('music-player');
-  const audio     = document.getElementById('bg-music');
-  const playIcon  = document.getElementById('play-icon');
-  const pauseIcon = document.getElementById('pause-icon');
-  const label     = document.getElementById('music-label');
-  if (!player || !audio) return;
-
-  audio.addEventListener('error', () => { player.style.display = 'none'; });
-
-  function toggle() {
-    if (audio.paused) {
-      audio.play().then(() => {
-        playIcon.style.display  = 'none';
-        pauseIcon.style.display = 'block';
-        label.textContent = '♪ Pauzeert';
-      }).catch(() => { label.textContent = '⚠ Geen audio'; });
-    } else {
-      audio.pause();
-      playIcon.style.display  = 'block';
-      pauseIcon.style.display = 'none';
-      label.textContent = '♪ Speel muziek';
-    }
-  }
-
-  player.addEventListener('click', toggle);
-  player.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
-}
-
-/* ── 4. CADEAU-KNOP ───────────────────────────────────────*/
+/* ── 3. CADEAU-KNOP ───────────────────────────────────────*/
 function initCadeauButton() {
-  const btn   = document.getElementById('btn-cadeau');
-  const audio = document.getElementById('bg-music');
+  const btn = document.getElementById('btn-cadeau');
   if (!btn) return;
-
   btn.addEventListener('click', () => {
     launchConfetti();
-    if (audio && audio.paused) {
-      audio.play().then(() => {
-        document.getElementById('play-icon')?.style.setProperty('display', 'none');
-        document.getElementById('pause-icon')?.style.setProperty('display', 'block');
-        const lbl = document.getElementById('music-label');
-        if (lbl) lbl.textContent = '♪ Pauzeert';
-      }).catch(() => {});
-    }
     setTimeout(() => { document.getElementById('redenen')?.scrollIntoView({ behavior: 'smooth' }); }, 1200);
   });
 }
@@ -508,7 +468,6 @@ function initEditMode() {
 document.addEventListener('DOMContentLoaded', () => {
   applyStoredContent(); // eerst content toepassen, dan de rest
   typewrite();
-  initMusicPlayer();
   initCadeauButton();
   initFadeObserver();
   confettiOnLoad();
